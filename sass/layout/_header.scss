@@ -1,0 +1,218 @@
+/* ------------------------------------------------- */
+/* HEADER                                            */
+/* ------------------------------------------------- */ 
+
+.main-header {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 768px) {
+        & { /* .main-header */
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+#menu {
+    display: none;
+
+    &:checked + .nav-bar {
+        display: block;
+    }
+
+}
+
+/* ------------------------------------------------- */
+/* NAVBAR                                            */
+/* ------------------------------------------------- */
+
+.nav-bar {
+    background-color: rgba($color: #333, $alpha: 0.5);
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 5px;
+
+
+    &__nav-list { /* .nav-bar__nav-list */
+
+        display: flex;
+        list-style-type: none;
+        justify-content: center;
+
+
+        @media (max-width: 768px) {
+            & {
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__nav-item {
+        text-align: center;
+    }
+
+    &__nav-link {
+        display: block;
+        color: #fff;
+        padding: 1em 2em;
+        text-decoration: none;
+        font-family: 'Raleway', sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        transition: 0.2s;
+    }
+
+    &__nav-link:hover {
+        background-color: goldenrod;
+        box-shadow: 0px 0px 5px goldenrod;
+        transform: scale(1.2);
+        color: #222;
+
+    }
+
+    @media (max-width: 768px) {
+        & {
+            display: none;
+        }
+    }
+}
+
+
+/* ------------------------------------------------- */
+/* SEARCH BAR                                        */
+/* ------------------------------------------------- */
+
+.search {
+    translate: -4.2em;
+    color: goldenrod;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+
+    &__logo-container, /* search-bar__logo-container */
+    &__form-container { /* search-bar__form-container */
+        padding: 1em;
+    }
+
+/*     &__logo-container {
+        background-color: yellow;
+    } */
+
+    &__form-container {
+        display: flex;
+        flex-basis: 100%; /* width: 100% */
+        justify-content: center;
+        align-items: center;
+    }
+
+/*     &__form-label{
+        
+    } */
+
+    &__form-search {
+        background-color: rgba($color: #333, $alpha: 0.5);
+        width: 65%;
+        height: 3.5em;
+        border: none;
+        border-radius: 40px;
+        margin-left: 2em;
+        padding-left: 2em;
+        transition: 0.5s;
+    }
+
+    &__form-search:focus{
+        background-color: #333;
+        width: 70%;
+    }
+
+    &__form-submit {
+        border-radius: 50%;
+        border: none;
+        float: right;
+        height: 3em;
+        translate: -3.1em;
+        background-color: rgba($color: #333, $alpha: 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        translate: 0.5s;
+        color: transparent;
+    }
+
+    &__form-search:focus {
+        color: #fff;
+    }
+
+    &__form-search:focus + &__form-submit{
+        background-color: goldenrod;
+    }
+
+    &__form-search:focus ~ .search{
+        color: #fff;
+    }
+
+    &__carrito-container {
+        display: flex;
+        flex: 0 0 3em;
+        justify-items: center;
+        align-items: center;
+        transition: 0.2s;
+        color: rgba($color: #333, $alpha: 0.5)
+    }
+
+    &__carrito-container:hover {
+        color: goldenrod;
+    }
+
+}
+
+/* ------------------------------------------------- */
+/* MENÚ TOOGLE                                       */
+/* ------------------------------------------------- */
+
+.menu-toogle {
+    display: none;
+    flex: 0 0 3em;
+    position: relative;
+    cursor: pointer;
+
+    &__label {
+        display: block;
+        height: 100%;
+    }
+
+    &__top-bread,
+    &__meat,
+    &__bottom-bread {
+        display: block;
+        background-color: rgba($color: #333, $alpha: 0.5);
+        height: .2em;
+        position: absolute;
+        left: .5em;
+        right: .5em;
+        transition: 0.5s;
+    }
+
+    &__label:focus +  &__top-bread,&__meat,&__bottom-bread {
+        background-color: #333;
+    }
+
+    &__top-bread {
+        top: 1.1em;
+    }
+    &__meat {
+        top: 50%;
+        margin-top: -.1em;
+    }
+    &__bottom-bread {
+        bottom: 1.1em;
+    }
+
+    @media (max-width: 768px) {
+        & {
+            display: block;
+        }
+    }
+}
