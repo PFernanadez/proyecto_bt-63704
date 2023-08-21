@@ -96,9 +96,12 @@
         padding: 1em;
     }
 
-/*     &__logo-container {
-        background-color: yellow;
-    } */
+    &__logo-container {
+        background-image: url(../../public/img/icon/icon.ico);
+        background-size: contain;
+        background-repeat: no-repeat;
+        color: transparent;
+    }
 
     &__form-container {
         display: flex;
