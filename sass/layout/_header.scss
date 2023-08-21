@@ -27,11 +27,8 @@
 /* ------------------------------------------------- */
 
 .nav-bar {
-    background-color: rgba($color: #333, $alpha: 0.5);
     width: 100%;
     margin: 0 auto;
-    box-shadow: 0px 0px 5px;
-
 
     &__nav-list { /* .nav-bar__nav-list */
 
@@ -63,8 +60,8 @@
     }
 
     &__nav-link:hover {
-        background-color: goldenrod;
-        box-shadow: 0px 0px 5px goldenrod;
+        background-color: var(--c-prpl);
+        box-shadow: 0px 0px 5px var(--c-prpl);
         transform: scale(1.2);
         color: #222;
 
