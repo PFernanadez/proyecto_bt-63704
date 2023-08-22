@@ -197,16 +197,18 @@
     &__meat,
     &__bottom-bread {
         display: block;
-        background-color: rgba($color: #333, $alpha: 0.5);
+        background-color: var(--c-rblu);
         height: .2em;
         position: absolute;
         left: .5em;
         right: .5em;
+        opacity: 0.5;
         transition: 0.5s;
     }
 
     &__label:hover > span{
-            background-color: #fff;
+            background-color: var(--c-ltblu);
+            opacity: 1;
         }
 
 /*     &__top-bread,
