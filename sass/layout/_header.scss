@@ -50,7 +50,7 @@
 
     &__nav-link {
         display: block;
-        color: #fff;
+        color: var(--c-ltblu);
         padding: 1em 2em;
         text-decoration: none;
         font-family: 'Raleway', sans-serif;
@@ -62,9 +62,8 @@
     &__nav-link:hover {
         background-color: var(--c-prpl);
         box-shadow: 0px 0px 5px var(--c-prpl);
+        color: var(--c-lvdr);
         transform: scale(1.2);
-        color: #222;
-
     }
 
     @media (max-width: 768px) {
@@ -81,7 +80,9 @@
 
 .search {
     translate: -4.2em;
-    color: goldenrod;
+    color: var(--c-mdnblu);
+    transition: 0.2s;
+    color: var(--c-ltblu);
 }
 
 .search-bar {
@@ -98,6 +99,8 @@
         background-size: contain;
         background-repeat: no-repeat;
         color: transparent;
+        translate: 1em;
+        opacity: 0.8;
     }
 
     &__form-container {
@@ -107,12 +110,9 @@
         align-items: center;
     }
 
-/*     &__form-label{
-        
-    } */
-
     &__form-search {
-        background-color: rgba($color: #333, $alpha: 0.5);
+        background-color: var(--c-rblu);
+        opacity: 0.2;
         width: 65%;
         height: 3.5em;
         border: none;
@@ -123,7 +123,7 @@
     }
 
     &__form-search:focus{
-        background-color: #333;
+        opacity: 0.8;
         width: 70%;
     }
 
@@ -133,24 +133,23 @@
         float: right;
         height: 3em;
         translate: -3.1em;
-        background-color: rgba($color: #333, $alpha: 0.5);
         display: flex;
         justify-content: center;
         align-items: center;
-        translate: 0.5s;
+        transition: 0.5s;
+        color: #fff;
+        opacity: 0;
         color: transparent;
     }
 
-    &__form-search:focus {
-        color: #fff;
-    }
 
     &__form-search:focus + &__form-submit{
-        background-color: goldenrod;
+        background-color: var(--c-ltblu);
+        opacity: 1;
     }
 
     &__form-search:focus ~ .search{
-        color: #fff;
+        color: var(--c-lvdr);
     }
 
     &__carrito-container {
@@ -159,11 +158,13 @@
         justify-items: center;
         align-items: center;
         transition: 0.2s;
-        color: rgba($color: #333, $alpha: 0.5)
+        color: var(--c-rblu);
+        opacity: 0.5;
     }
 
     &__carrito-container:hover {
-        color: goldenrod;
+        color: var(--c-ltblu);
+        opacity: 1;
     }
 
 }
