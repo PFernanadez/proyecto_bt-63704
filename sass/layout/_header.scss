@@ -128,6 +128,7 @@
     }
 
     &__form-submit {
+        position: relative;
         border-radius: 50%;
         border: none;
         float: right;
@@ -141,7 +142,6 @@
         opacity: 0;
         color: transparent;
     }
-
 
     &__form-search:focus + &__form-submit{
         background-color: var(--c-ltblu);
@@ -157,9 +157,17 @@
         flex: 0 0 3em;
         justify-items: center;
         align-items: center;
+        position: relative;
         transition: 0.2s;
         color: var(--c-rblu);
         opacity: 0.5;
+    }
+
+    &__carrito-container::before {
+        font-family: "Font Awesome 6 Free";
+        content: "\f07a";
+        font-size: 2em;
+        font-weight: 900;
     }
 
     &__carrito-container:hover {
