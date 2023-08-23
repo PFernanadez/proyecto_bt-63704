@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="x-icon" href="/public/img/icon/icon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Proyecto integrador - CONTACTO</title>
 </head>
 
@@ -15,22 +17,66 @@
     <nav class="nav-bar"> <!-- nav-bar -->
       <ul class="nav-bar__nav-list">
         <li class="nav-bar__nav-item">
-          <a href="#" class="nav-bar__nav-link">Inicio</a>
+          <a href="/index.html" class="nav-bar__nav-link">Inicio</a>
         </li>
         <li class="nav-bar__nav-item">
           <a href="#" class="nav-bar__nav-link">Alta</a>
         </li>
         <li class="nav-bar__nav-item">
-          <a href="#" class="nav-bar__nav-link">Contacto</a>
+          <a href="/views/contacto.html" class="nav-bar__nav-link">Contacto</a>
         </li>
         <li class="nav-bar__nav-item">
-          <a href="#" class="nav-bar__nav-link">Nosotros</a>
+          <a href="/views/nosotros.html" class="nav-bar__nav-link">Nosotros</a>
         </li>
       </ul>
-    </nav> <!-- nav-bar -->
+      </nav>
 
+      <div class="search-bar"> <!-- search-bar -->
+        <div class="search-bar__logo-container">Logo</div>
+        <div></div>
+        <div class="menu-toogle">
+          <label for="menu" class="menu-toogle__label">
+            <span class="menu-toogle__top-bread"></span>
+            <span class="menu-toogle__meat"></span>
+            <span class="menu-toogle__bottom-bread"></span>
+          </label>
+        </div>
+      </div>
 
   </header>
+
+  <main>
+
+    <div class="form-container">
+      <form action="#" class="form-container__form">
+        <div class="form-container__row">
+          <div class="form-container__input-group">
+            <input class="form-container__input" type="text" id="name" required>
+            <label class="form-container__label" for="name"><i class="fa-solid fa-user"></i> Ingrese su Nombre</label>
+          </div>
+
+          <div class="form-container__input-group">
+            <input class="form-container__input" type="text" id="number" required>
+            <label class="form-container__label" for="number"><i class="fa-solid fa-phone"></i> Ingrese su Teléfono</label>
+          </div>
+        </div>
+
+        <div class="form-container__input-group">
+          <input class="form-container__input" type="text" id="email" required>
+          <label class="form-container__label" for="email"><i class="fa-solid fa-envelope"></i> Ingrese su E-Mail</label>
+        </div>
+
+        <div class="form-container__input-group">
+          <textarea class="form-container__textarea" id="message" rows="8"></textarea>
+          <label class="form-container__label" for="message">Escriba aqui...</label>
+        </div>
+
+        <button type="submit" class="form-container__button">Enviar</button>
+
+      </form>
+    </div>
+
+  </main>
 
 
   

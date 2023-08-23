@@ -1,3 +1,12 @@
+:root {
+    --c-ltblu: #6ECBF5;
+    --c-prpl: #C252E1;
+    --c-lvdr: #efedf7;
+    --c-rblu: #586AE2;
+    --c-mdnblu: #2A2356;
+
+}
+
 @import "base/reset"; /* parciales. */
 @import "base/typography";
 
@@ -5,6 +14,7 @@
 @import "layout/body";
 
 @import "pages/index";
+@import "pages/contacto";
+@import "pages/nosotros";
 
 @import "components/cards";
-

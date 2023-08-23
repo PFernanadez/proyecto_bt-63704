@@ -192,14 +192,6 @@
     cursor: pointer;
     transition: 0.5s;
 
-/*     &:hover + &__top-bread,
-    &__meat,
-    &__bottom-bread {
-        background-color: #fff;
-
-    } */
- 
-
     &__label {
         display: block;
         height: 100%;
@@ -208,6 +200,7 @@
     &__top-bread,
     &__meat,
     &__bottom-bread {
+        width: 2em;
         display: block;
         background-color: var(--c-rblu);
         height: .2em;
@@ -222,12 +215,6 @@
             background-color: var(--c-ltblu);
             opacity: 1;
         }
-
-/*     &__top-bread,
-    &__meat,
-    &__bottom-bread, :hover {
-        background-color: goldenrod;
-    } */
 
     &__top-bread {
         top: 1.1em;
